@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="WebRTC getUserMedia MediaRecorder API">
+    <title>WebRtc tutorial</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+<img src="assets/image/logo.png" style="display:block; margin:auto;"></img>
+    <div id="main">
+				<section class="wrapper style1">
+					<div class="inner">
+						<header class="align-center">
+							<h2>모의 면접 중입니다</h2>
+						</header>
+						<!-- 2 Column Video Section -->
+							<div class="flex flex-2">
+								<div class="video col">
+									<video id="localVideo" controls autoplay oncontextmenu="return false;" width="100%"></video>
+									<p class="caption">
+										면접관 입니다.
+									</p>
+								</div>
+								<div id="clientVideo" class="video col">
+									<video id="remoteVideo" controls autoplay oncontextmenu="return false;" width="100%"></video>
+									<p class="caption">
+										면접자 입니다.
+									</p>
+								</div>
+							</div>
+					</div>
+				</section>
+    </div>
+	<!--녹화기능-->
+	<div id='btns'>
+      <button  class="btn btn-default" id='start'>Start</button>
+      <button  class="btn btn-default" id='stop'>Stop</button>
+    </div>
+	<div>
+      <ul  class="list-unstyled" id='ul'></ul>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="./rtc.js"></script>
+	<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+     <!--스타일-->
+</body>
+
+</html>
